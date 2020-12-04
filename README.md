@@ -1,2 +1,1 @@
-# Edugi_CRUD_Flutter_Example3
-CRUD Flutter using API and Mariadb
+Untuk databasenya silahkan download via website https://edugi.web.id
