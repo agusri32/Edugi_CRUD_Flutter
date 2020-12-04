@@ -23,8 +23,8 @@ TextEditingController controllerStock;
 
 
 void editData(){
-  //var url="http://10.0.2.2/flutter_crud3/editdata.php";
-  var url="https://api.edugi.web.id/editdata.php";
+  var url="http://10.0.2.2/webapi/editdata.php";
+  //var url="https://api.edugi.web.id/editdata.php";
 
   http.post(url,body: {
     "id": widget.list[widget.index]['id'],

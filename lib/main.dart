@@ -20,7 +20,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Future<List> getData() async {
-    //final response = await http.get("http://10.0.2.2/flutter_crud3/getdata.php");
+    //final response = await http.get("http://10.0.2.2/webapi/getdata.php");we
     final response = await http.get("https://api.edugi.web.id/getdata.php");
     return json.decode(response.body);
   }
