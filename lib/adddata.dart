@@ -15,8 +15,8 @@ TextEditingController controllerPrice = new TextEditingController();
 TextEditingController controllerStock = new TextEditingController();
 
 void addData(){
-  //var url="http://10.0.2.2/webapi/adddata.php";
-  var url="https://api.yourdomain.com/adddata.php";
+  var url="http://10.0.2.2/webapi/adddata.php";
+  //var url="https://api.yourdomain.com/adddata.php";
 
   http.post(url, body: {
     "itemcode": controllerCode.text,

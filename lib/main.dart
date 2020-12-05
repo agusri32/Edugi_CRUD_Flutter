@@ -20,8 +20,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Future<List> getData() async {
-    //final response = await http.get("http://10.0.2.2/webapi/getdata.php");
-    final response = await http.get("https://api.yourdomain.com/getdata.php");
+    final response = await http.get("http://10.0.2.2/webapi/getdata.php");
+    //final response = await http.get("https://api.yourdomain.com/getdata.php");
     return json.decode(response.body);
   }
 
