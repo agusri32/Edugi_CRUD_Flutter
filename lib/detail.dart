@@ -1,8 +1,9 @@
 import 'package:crudflutter/main.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
 import './editdata.dart';
 import './main.dart';
-import 'package:http/http.dart' as http;
 
 class Detail extends StatefulWidget {
   List list;
@@ -26,12 +27,11 @@ class _DetailState extends State<Detail> {
 
   void confirm() {
     AlertDialog alertDialog = new AlertDialog(
-      content: new Text(
-          "Yakin ingin menghapus data '${widget.list[widget.index]['item_name']}' ?"),
+      content: new Text("Yakin ingin menghapus data '${widget.list[widget.index]['item_name']}' ?"),
       actions: <Widget>[
+
         new RaisedButton(
-          child: new Text(
-            "Yakin!",
+          child: new Text("Yakin!",
             style: new TextStyle(color: Colors.black),
           ),
           color: Colors.blue,
@@ -44,6 +44,7 @@ class _DetailState extends State<Detail> {
             );
           },
         ),
+
         new RaisedButton(
           child: new Text(
             "Kembali",
@@ -52,6 +53,7 @@ class _DetailState extends State<Detail> {
           color: Colors.red,
           onPressed: ()=>Navigator.pop(context),
         ),
+
       ],
     );
 
@@ -64,13 +66,16 @@ class _DetailState extends State<Detail> {
       appBar: new AppBar(
         title: new Text("${widget.list[widget.index]['item_name']}"),
       ),
+
       body: new Container(
         height: 250.0,
         padding: const EdgeInsets.all(20.0),
         child: new Card(
+
           child: new Center(
             child: new Column(
               children: <Widget>[
+
                 new Padding(
                   padding: const EdgeInsets.only(top: 30.0),
                 ),
@@ -93,32 +98,40 @@ class _DetailState extends State<Detail> {
                 new Padding(
                   padding: const EdgeInsets.only(top: 30.0),
                 ),
+
                 new Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+
                     new RaisedButton(
                       child: new Text("EDIT"),
                       color: Colors.blue,
                       onPressed: () => Navigator.of(context).push(
-                            new MaterialPageRoute(
-                                builder: (BuildContext context) => new EditData(
-                                      list: widget.list,
-                                      index: widget.index,
-                                    )),
+                          new MaterialPageRoute(
+                              builder: (BuildContext context) => new EditData(
+                                list: widget.list,
+                                index: widget.index,
+                              )
                           ),
+                      ),
                     ),
+
                     new RaisedButton(
                       child: new Text("DELETE"),
                       color: Colors.red,
                       onPressed: () => confirm(),
                     ),
+
                   ],
                 ),
+
               ],
             ),
           ),
+
         ),
       ),
     );
+
   }
 }
