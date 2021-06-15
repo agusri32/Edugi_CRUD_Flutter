@@ -14,7 +14,7 @@ class _AddDataState extends State<AddData> {
   TextEditingController controllerStock = new TextEditingController();
 
   void addData(){
-    var url="http://10.0.2.2/web_crud/adddata.php";
+    var url="https://restapi32.000webhostapp.com/web_crud/adddata.php";
     //var url="https://api.yourdomain.com/adddata.php";
 
     http.post(url, body: {

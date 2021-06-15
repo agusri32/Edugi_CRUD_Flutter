@@ -17,7 +17,7 @@ class Detail extends StatefulWidget {
 class _DetailState extends State<Detail> {
 
   void deleteData(){
-    var url="http://10.0.2.2/web_crud/deleteData.php";
+    var url="https://restapi32.000webhostapp.com/web_crud/deleteData.php";
     //var url="https://api.yourdomain.com/deleteData.php";
 
     http.post(url, body: {

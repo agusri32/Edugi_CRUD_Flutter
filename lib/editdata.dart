@@ -20,7 +20,7 @@ class _EditDataState extends State<EditData> {
   TextEditingController controllerStock;
 
   void editData(){
-    var url="http://10.0.2.2/web_crud/editdata.php";
+    var url="https://restapi32.000webhostapp.com/web_crud/editdata.php";
     //var url="https://api.yourdomain.com/editdata.php";
 
     http.post(url,body: {
